@@ -3,7 +3,6 @@ import {NextFunction, Request, Response } from 'express';
 
 export  const validateSchema = (schema: Joi.Schema) => (req: Request, res: Response, next: NextFunction) => {
   const { error } = schema.validate(req.body);
-    console.log('body: ', req.body)
   if (error) {
       return res.status(400).json(             "Une erreur s'est produite"
       );

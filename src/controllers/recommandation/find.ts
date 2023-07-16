@@ -5,7 +5,6 @@ import {SearchRecipeDto} from "../../dtos/input";
 export const  find =  async  (req: Request, res: Response) => {
     const search  : SearchRecipeDto = req.body;
 
-    console.log('search: ', search);
     const recommendation =  await findRecommendation(search);
 
 
