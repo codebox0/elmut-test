@@ -9,7 +9,7 @@ export const  get =  async  (req: Request, res: Response) => {
     const recommendation: RecommendationDto<string> | undefined =  await findRecommendationById(id);
 
     if (!recommendation) {
-        return res.status(404).json({message: `Recommendation not found`});
+        return res.status(404).json({error: `Recommendation not found`});
     }
 
     return res.status(200).json({data: recommendation});

@@ -19,7 +19,7 @@ export type recommandationInput<T> = {
 export const recommandationSchema = Joi.object({
     animal_type: Joi.string(),
     race: Joi.string(),
-    min_coef: Joi.string(),
+    min_coef: Joi.number(),
     max_coef: Joi.number(),
     // recipe_slug: Joi.string().required(),
 });
