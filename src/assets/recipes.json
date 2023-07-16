@@ -1,0 +1,114 @@
+[
+  {
+    "id": "1",
+    "slug": "dog-recipe-1",
+    "animal": "dog",
+    "name": "pork",
+    "coefficient": 1
+  },
+  {
+    "id": "2",
+    "slug": "cat-recipe-1",
+    "animal": "cat",
+    "name": "fish",
+    "coefficient": 3.5
+  },
+  {
+    "id": "3",
+    "slug": "dog-recipe-2",
+    "animal": "dog",
+    "name": "turkey",
+    "coefficient": 0.5
+  },
+  {
+    "id": "4",
+    "slug": "cat-recipe-2",
+    "animal": "cat",
+    "name": "chicken",
+    "coefficient": 0.5
+  },
+  {
+    "id": "5",
+    "slug": "dog-recipe-3",
+    "animal": "dog",
+    "name": "beef",
+    "coefficient": 2
+  },
+  {
+    "id": "6",
+    "slug": "cat-recipe-3",
+    "animal": "cat",
+    "name": "beef",
+    "coefficient": 1
+  },
+  {
+    "id": "7",
+    "slug": "dog-recipe-4",
+    "animal": "dog",
+    "name": "chicken",
+    "coefficient": 2.9
+  },
+  {
+    "id": "8",
+    "slug": "cat-recipe-9",
+    "animal": "cat",
+    "name": "fish",
+    "coefficient": 2.2
+  },
+  {
+    "id": "9",
+    "slug": "dog-recipe-5",
+    "animal": "dog",
+    "name": "pork",
+    "coefficient": 1.8
+  },
+  {
+    "id": "10",
+    "slug": "cat-recipe-4",
+    "animal": "cat",
+    "name": "hamster",
+    "coefficient": 2.9
+  },
+  {
+    "id": "11",
+    "slug": "dog-recipe-6",
+    "animal": "dog",
+    "name": "lamb",
+    "coefficient": 2.2
+  },
+  {
+    "id": "12",
+    "slug": "cat-recipe-5",
+    "animal": "cat",
+    "name": "rabbit",
+    "coefficient": 3.8
+  },
+  {
+    "id": "13",
+    "slug": "dog-recipe-7",
+    "animal": "dog",
+    "name": "goat",
+    "coefficient": 3
+  },
+  {
+    "id": "14",
+    "slug": "cat-recipe-6",
+    "animal": "cat",
+    "name": "turtle",
+    "coefficient": 1.9
+  },
+  {
+    "id": "15",
+    "slug": "dog-recipe-8",
+    "animal": "dog",
+    "name": "sheep",
+    "coefficient": 3.2
+  },
+  {
+    "id": "16",
+    "slug": "cat-recipe-7",
+    "animal": "cat",
+    "name": "snake",
+    "coefficient": 4
+  }
+]

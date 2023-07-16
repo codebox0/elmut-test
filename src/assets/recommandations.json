@@ -1,0 +1,52 @@
+
+[
+  {
+    "id": "1",
+    "animal_type": "cat",
+    "race":  "european",
+    "min_coef": 0,
+    "max_coef": 2,
+    "recipes_slug": [
+      "cat-recipe-1",
+      "cat-recipe-2",
+      "cat-recipe-3",
+      "cat-recipe-6"
+    ]
+  },
+  {
+    "id": "2",
+    "animal_type": "dog",
+    "race":  "european",
+    "min_coef": 2,
+    "max_coef": 4,
+    "recipes_slug": [
+      "dog-recipe-4",
+      "dog-recipe-6",
+      "dog-recipe-7"
+    ]
+  },
+  {
+    "id": "3",
+    "animal_type": "cat",
+    "race":  "persian",
+    "min_coef": 2,
+    "max_coef": 5,
+    "recipes_slug": [
+      "cat-recipe-4",
+      "cat-recipe-9",
+      "cat-recipe-5"
+    ]
+  },
+  {
+    "id": "4",
+    "animal_type": "dog",
+    "race":  "persian",
+    "min_coef": 0,
+    "max_coef": 2,
+    "recipes_slug": [
+      "dog-recipe-1",
+      "dog-recipe-2",
+      "dog-recipe-3"
+    ]
+  }
+]

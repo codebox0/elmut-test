@@ -1,0 +1,17 @@
+/node_modules/
+/.idea/
+/.vscode/
+/.vscode-test/
+/.yarn-integrity
+/.yarn-metadata.json
+/.yarnrc
+/coverage
+
+# Dependency directories
+
+/node_modules/
+/dist
+
+
+yarn.lock
+

@@ -1,0 +1,295 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "REST API for Swagger Documentation",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8080/"
+    }
+  ],
+  "paths": {
+    "/recipes": {
+      "get": {
+        "tags": [
+          "PlaceEndpoints"
+        ],
+        "summary": "Get all recipes",
+        "description": "Get all recipes from the database.",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RecipeSchema"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/recipes/{id}": {
+      "get": {
+        "tags": [
+          "PlaceEndpoints"
+        ],
+        "summary": "Get recipe by id",
+        "description": "Get recipe by id",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "description": "id of the recipe",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "items": {
+                    "$ref": "#/components/schemas/RecipeSchema"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/recommandations": {
+      "get": {
+        "tags": [
+          "PlaceEndpoints"
+        ],
+        "summary": "Get all recipes",
+        "description": "Get all recipes from the database.",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RecipeSchema"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/recommandations/{id}": {
+        "get": {
+            "tags": [
+            "PlaceEndpoints"
+            ],
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "description": "id of the recipe",
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+            "summary": "Get recipe by id",
+            "description": "Get recipe by id",
+            "responses": {
+            "200": {
+                "description": "Success",
+                "content": {
+                "application/json": {
+                    "schema": {
+                    "type": "object",
+                    "items": {
+                        "$ref": "#/components/schemas/RecipeSchema"
+                    }
+                    }
+                }
+                }
+            }
+            }
+        }
+    },
+    "/recommandations/find": {
+      "post": {
+        "tags": [
+          "findRecipes"
+        ],
+        "summary": "find recipes",
+        "description": "find recipes from the database.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RecommendationSchema"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RecommendationSchema"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    },
+    "schemas": {
+      "RecipeSchema": {
+        "description": "Recipes schema",
+        "required": [
+          "slug",
+          "animal",
+          "name",
+          "coefficient"
+        ],
+        "type": "object",
+        "properties": {
+          "slug": {
+            "type": "string",
+            "example": "",
+            "minLength": 1,
+            "maxLength": 255,
+            "pattern": "^[a-zA-Z0-9 ]+$",
+            "description": ""
+          },
+          "animal": {
+            "type": "string",
+            "example": "",
+            "minLength": 1,
+            "maxLength": 255,
+            "pattern": "^[a-zA-Z0-9 ]+$",
+            "description": ""
+          },
+          "name": {
+            "type": "string",
+            "example": "",
+            "minLength": 1,
+            "maxLength": 255,
+            "pattern": "^[a-zA-Z0-9 ]+$",
+            "description": ""
+          },
+          "coefficient": {
+            "type": "string",
+            "example": "",
+            "minLength": 1,
+            "maxLength": 255,
+            "pattern": "^[a-zA-Z0-9 ]+$",
+            "description": ""
+          }
+        }
+      },
+      "RecommendationSchema": {
+        "description": "Recipes schema",
+        "type": "object",
+        "properties": {
+          "animal_type": {
+            "type": "string",
+            "example": "",
+            "minLength": 1,
+            "maxLength": 255,
+            "pattern": "^[a-zA-Z0-9 ]+$",
+            "description": ""
+          },
+          "race": {
+            "type": "string",
+            "example": "",
+            "minLength": 1,
+            "maxLength": 255,
+            "pattern": "^[a-zA-Z0-9 ]+$",
+            "description": ""
+          },
+          "min_coef": {
+            "type": "string",
+            "example": "",
+            "minLength": 1,
+            "maxLength": 255,
+            "pattern": "^[a-zA-Z0-9 ]+$",
+            "description": ""
+          },
+          "max_coef": {
+            "type": "string",
+            "example": "",
+            "minLength": 1,
+            "maxLength": 255,
+            "pattern": "^[a-zA-Z0-9 ]+$",
+            "description": ""
+          }
+        }
+      },
+      "TokenSchema": {
+        "description": "Token schema",
+        "required": [
+          "firstName",
+          "lastName"
+        ],
+        "type": "object",
+        "properties": {
+          "firstName": {
+            "type": "string",
+            "example": "John",
+            "minLength": 1,
+            "maxLength": 255,
+            "pattern": "^[a-zA-Z]+$",
+            "description": "First name of the user",
+            "default": "John"
+          },
+          "lastName": {
+            "type": "string",
+            "example": "Doe",
+            "minLength": 1,
+            "maxLength": 255,
+            "pattern": "^[a-zA-Z]+$",
+            "description": "Last name of the user",
+            "default": "Doe"
+          }
+        }
+      }
+    }
+  },
+  "security": [
+    {
+      "bearerAuth": []
+    }
+  ]
+}
