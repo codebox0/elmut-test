@@ -5,6 +5,19 @@ Technologies:
 - Typescript obligatoire
 - Express obligatoire (vanilla ou NestJS)
 
+## Acces au lien avec swagger en local:
+- `npm install`
+- `npm run start:dev`
+- `http://localhost:3000/api-docs`
+
+liste des routes:
+- `GET /recipes` : liste des recettes
+- `GET /recipes/{id}` : détail d'une recette
+- `GET /recommendations` : liste des recommendations
+- `GET /recommendations/{id}` : détail d'une recommendation
+- `POST /recommendations/find` : recommandation personnalisée avec les differents recipes avec body params
+
+
 Description:
 Il faudra concevoir un système API en respectant les bonnes pratiques: code aéré, réparti correctement entre plusieurs fichiers (contrôleurs, routes, DTOs etc…).
 Sans base de données, vous construirez plusieurs modèles pour stocker des informations en statique:
