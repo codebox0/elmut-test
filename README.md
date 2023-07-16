@@ -5,11 +5,6 @@ Technologies:
 - Typescript obligatoire
 - Express obligatoire (vanilla ou NestJS)
 
-## Acces au lien avec swagger en local:
-- `npm install`
-- `npm run start:dev`
-- `http://localhost:3000/api-docs`
-
 liste des routes:
 - `GET /recipes` : liste des recettes
 - `GET /recipes/{id}` : détail d'une recette
@@ -17,6 +12,19 @@ liste des routes:
 - `GET /recommendations/{id}` : détail d'une recommendation
 - `POST /recommendations/find` : recommandation personnalisée avec les differents recipes avec body params
 
+## Acces au lien avec swagger en local:
+- `npm install`
+- `npm run start:dev`
+- `http://localhost:3000/api-docs`
+
+## illustration image swagger:
+__*SWAGGER*__
+![swagger.png](img/swagger.png)
+__*Test Coverage*__
+![test_coverage.png](img/test_coverage.png)
+
+## GIthub action: 
+--> **Github action workflow**:   ./github/workflows/build.app.yml
 
 Description:
 Il faudra concevoir un système API en respectant les bonnes pratiques: code aéré, réparti correctement entre plusieurs fichiers (contrôleurs, routes, DTOs etc…).
